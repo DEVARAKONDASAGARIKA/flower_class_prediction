@@ -46,6 +46,7 @@ flower-classification/
 │
 └── README.md                         # Project documentation
 
+```
 Technical Implementation
 
 1️⃣ Image Preprocessing
