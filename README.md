@@ -1,11 +1,11 @@
 # flower_class_prediction
-# 🌸 Indian Flower Classification using Machine Learning
+#  Indian Flower Classification using Machine Learning
 
 This repository contains a **complete end-to-end Machine Learning pipeline** for classifying **Indian origin flowers** using image data. The project demonstrates **image preprocessing, feature extraction, model training, evaluation, and result analysis**, making it suitable for **academic projects, hackathons, interviews, and viva presentations**.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 The goal of this project is to **automatically classify flower images into their respective categories** using traditional Machine Learning techniques (not deep learning). The pipeline is designed to be **interpretable, modular, and easy to explain**, which is ideal for **undergraduate ML coursework and interviews**.
 
@@ -18,7 +18,7 @@ Key highlights:
 
 ---
 
-## 📂 Dataset Structure
+##  Dataset Structure
 
 The dataset directory should follow this structure:
 
@@ -54,7 +54,7 @@ IndianFlowerDataset/
 
 ---
 
-## 🔄 Pipeline Architecture
+## Pipeline Architecture
 
 ```
 Image Loading
@@ -74,7 +74,7 @@ Evaluation & Metrics
 
 ---
 
-## 🧠 Feature Extraction Techniques
+## Feature Extraction Techniques
 
 The following features are extracted from **colored images**:
 
@@ -97,7 +97,7 @@ All extracted features are concatenated into a **single feature vector**.
 
 ---
 
-## 🤖 Machine Learning Models Used
+##  Machine Learning Models Used
 
 The project implements **four different Machine Learning models** to compare performance and understand their strengths on image-based classification tasks.
 
@@ -131,7 +131,7 @@ The project implements **four different Machine Learning models** to compare per
 
 ---
 
-## 📊 Model Evaluation Metrics
+##  Model Evaluation Metrics
 
 The performance of the models is evaluated using:
 
@@ -147,7 +147,7 @@ Additionally, predicted labels are displayed **along with true labels** for bett
 
 ---
 
-## 🚀 How to Run the Project
+##  How to Run the Project
 
 ### 1️⃣ Clone the Repository
 
@@ -194,7 +194,7 @@ Exact accuracy may vary depending on:
 
 ---
 
-## 🎯 Why This Project is Interview-Friendly
+##  Why This Project is Interview-Friendly
 
 ✔ Uses **classical ML (easy to explain)**
 ✔ Clear **problem → solution mapping**
@@ -204,26 +204,12 @@ Exact accuracy may vary depending on:
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 * Add Deep Learning (CNN) for comparison
 * Perform feature selection / PCA
 * Deploy model using Flask or FastAPI
 * Add real-time flower prediction
 
----
 
-## 👤 Author
 
-**Undergraduate CSE Student**
-Indian Institute of Technology (IIT)
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
----
-
-⭐ *If you find this project useful, feel free to star the repository!*
