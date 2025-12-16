@@ -47,15 +47,15 @@ flower-classification/
 └── README.md                         # Project documentation
 
 ```
-Technical Implementation
+## Technical Implementation
 
 1️⃣ Image Preprocessing
 
--Resize images to 128 × 128
--Convert images to grayscale for texture analysis
--Apply Gaussian filtering (σ = 1) for noise reduction
--Perform histogram equalization for contrast enhancement
--Preserve color images for color feature extraction
+- Resize images to 128 × 128
+- Convert images to grayscale for texture analysis
+- Apply Gaussian filtering (σ = 1) for noise reduction
+- Perform histogram equalization for contrast enhancement
+- Preserve color images for color feature extraction
 
 2️⃣ Feature Extraction
 
@@ -64,28 +64,28 @@ Each image is represented using ~560 handcrafted features.
 🔹 Texture Features
 
 Gabor Filter Features:
--Kernel size: 15 × 15
--Sigma values: [2, 3]
--Orientations: 0°, 45°, 90°, 135°
--Features extracted: Mean & Variance
+- Kernel size: 15 × 15
+- Sigma values: [2, 3]
+- Orientations: 0°, 45°, 90°, 135°
+- Features extracted: Mean & Variance
 
 Local Binary Pattern (LBP):
--Neighbors (P): 24
--Radius (R): 3
--Method: uniform
--Histogram bins: 26
+- Neighbors (P): 24
+- Radius (R): 3
+- Method: uniform
+- Histogram bins: 26
 
 🔹 Color Features
 
 HSV Color Histogram:
--Bins: 8 × 8 × 8 (512 features)
--Captures hue, saturation, and brightness distribution
+- Bins: 8 × 8 × 8 (512 features)
+- Captures hue, saturation, and brightness distribution
 
 RGB Statistics:
--Mean and standard deviation of R, G, B channels (6 features)
+- Mean and standard deviation of R, G, B channels (6 features)
 
 Color Moments:
--Mean, Variance, Skewness per channel (9 features)
+- Mean, Variance, Skewness per channel (9 features)
 
 Total Features per Image:
 ≈ 560 features
@@ -95,30 +95,80 @@ Four classifiers were implemented and evaluated:
 
 🔹 Support Vector Machine (SVM)
 
--Kernel: RBF
--Hyperparameter tuning using GridSearchCV
--5-fold cross-validation
+- Kernel: RBF
+- Hyperparameter tuning using GridSearchCV
+- 5-fold cross-validation
 
 🔹 Random Forest Classifier
 
--Number of trees: 300
--Max depth: Unlimited
--Random state: 42
+- Number of trees: 300
+- Max depth: Unlimited
+- Random state: 42
 
 🔹 K-Nearest Neighbors (KNN)
 
--Neighbors: k = 5
--Distance metric: Euclidean
+- Neighbors: k = 5
+- Distance metric: Euclidean
 
 🔹 Logistic Regression
 
--Max iterations: 500
--Multi-class strategy: One-vs-Rest
+- Max iterations: 500
+- Multi-class strategy: One-vs-Rest
 
-📊 Model Training & Evaluation
 
-Train-Test Split: 80% / 20% (Stratified)
+## Model Training & Evaluation
 
-Feature Scaling: StandardScaler (except Random Forest)
+- Train-Test Split: 80% / 20% (Stratified)
+- Feature Scaling: StandardScaler (except Random Forest)
+- Cross-Validation: 10-fold CV
 
-Cross-Validation: 10-fold CV
+## Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+
+## Results & Performance
+
+- SVM: Highest accuracy (dataset-dependent)
+- Random Forest: Robust and interpretable
+- KNN: Effective for smaller datasets
+- Logistic Regression: Fast training with good interpretability
+
+## Visualizations Generated
+
+- Sample training images
+- Confusion matrices for all models
+- Model comparison bar chart
+- 10-fold cross-validation accuracy plots
+- Correct vs incorrect prediction samples
+
+## How to Run
+
+Prerequisites:
+- pip install notebook numpy pandas opencv-python matplotlib seaborn scikit-learn scikit-image joblib 
+
+## Execution
+
+Update dataset path:
+- data_path = r"C:\Users\DELL\Desktop\indianflower"
+Launch the Jupyter server:
+- jupyter notebook
+Run:
+- jupyter nbconvert --execute --to notebook --inplace your_notebook_file.ipynb
+
+## Performance Optimization Tips
+
+- Use PCA for dimensionality reduction
+- Add HOG / SIFT features
+- Apply data augmentation
+- Use ensemble models
+
+## Future Enhancements
+
+- CNN-based deep learning
+- Transfer learning
+- Real-time classification
+- Web interface (Flask/Django) 
