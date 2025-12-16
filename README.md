@@ -41,11 +41,11 @@ flower-classification/
 # Technical Implementation
 1️⃣ Image Preprocessing
 
-->Resize images to 128 × 128
-->Convert images to grayscale for texture analysis
-->Apply Gaussian filtering (σ = 1) for noise reduction
-->Perform histogram equalization for contrast enhancement
-->Preserve color images for color feature extraction
+Resize images to 128 × 128
+Convert images to grayscale for texture analysis
+Apply Gaussian filtering (σ = 1) for noise reduction
+Perform histogram equalization for contrast enhancement
+Preserve color images for color feature extraction
 
 2️⃣ Feature Extraction
 
